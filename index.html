@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8fa">
+  <meta name="description" content="用可交互的英文界面模拟和中文讲解，轻松熟悉 GitHub 页面与按钮。">
+  <title>GitHub 看得懂｜中文交互学习站</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-toggle" aria-label="打开导航" aria-controls="site-navigation" aria-expanded="false" aria-haspopup="dialog">☰</button>
+    <a class="brand" href="#practice" aria-label="GitHub 看得懂首页"><span class="brand-mark">●</span><span>Dashboard</span></a>
+    <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Type / to search" aria-label="搜索 GitHub 页面和项目"><kbd>/</kbd></label>
+    <div class="top-actions"><a class="practice-inbox" href="#inbox">Notifications</a><button class="header-icon" data-page="org" title="Organizations">♧</button><button class="header-icon" data-action="create-menu" title="Create new">＋⌄</button><button class="header-icon" data-page="issues" title="Issues">◉</button><button class="header-icon" data-page="pulls" title="Pull requests">⑂</button><button class="header-icon" data-page="projects" title="Projects">▤</button><span class="avatar">学</span></div>
+  </header>
+  <div class="layout">
+    <dialog id="site-navigation" class="nav-drawer" aria-label="站点导航"><header class="nav-drawer-header"><strong>导航</strong><form method="dialog"><button class="button" autofocus>关闭</button></form></header><aside class="sidebar">
+      <div class="side-primary"><button class="nav-item active" data-page="home"><span>⌂</span> Home</button><button class="nav-item" data-page="feed"><span>◎</span> Feed</button></div>
+      <div class="side-separator"></div>
+      <div class="side-heading">Top repositories <button class="side-search" aria-label="搜索仓库">⌕</button></div>
+      <button class="repo-nav" data-action="open-repo"><span class="repo-dot purple">✚</span> li-1116/wardrobe-miniprogram</button>
+      <button class="repo-nav" data-action="open-repo"><span class="repo-dot rainbow">✿</span> WangLaoShi/JobsCrawler</button>
+      <button class="repo-nav" data-action="open-repo"><span class="repo-dot purple">✚</span> FENGJIN-ux/JobsCrawler</button>
+      <button class="nav-item explore-side" data-page="explore"><span>⌕</span> Explore</button>
+      <button class="nav-item" data-page="profile"><span>◉</span> Your profile</button>
+      <div class="side-separator"></div>
+      <div class="side-heading">Learning guide <span>学习导览</span></div>
+      <div class="side-label">认识 GitHub</div>
+      <button class="nav-item" data-page="overview"><span>◉</span> GitHub 是什么</button>
+      <button class="nav-item" data-page="profile"><span>◉</span> 个人主页</button>
+      <button class="nav-item" data-page="repo"><span>▤</span> 仓库与代码 <small>可练习</small></button>
+      <button class="nav-item" data-page="issues"><span>◉</span> Issues</button>
+      <button class="nav-item" data-page="pulls"><span>⇄</span> Pull requests</button>
+      <div class="side-label">团队与自动化</div>
+      <button class="nav-item" data-page="org"><span>♧</span> Organizations</button>
+      <button class="nav-item" data-page="projects"><span>▦</span> Projects</button>
+      <button class="nav-item" data-page="actions"><span>▶</span> Actions</button>
+      <button class="nav-item" data-page="packages"><span>⬡</span> Packages</button>
+      <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+      <div class="side-label">随时查</div>
+      <button class="nav-item" data-page="dictionary"><span>文</span> 英文词汇表</button>
+      <button class="nav-item" data-page="quiz"><span>✓</span> 小测验</button>
+      <div class="sidebar-progress"><div class="progress-caption"><span>学习进度</span><b id="progress-text">0%</b></div><div class="progress-track"><i id="progress-bar"></i></div><small>进度只保存在这台设备的浏览器</small></div>
+    </aside></dialog>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script><script src="practice.js"></script>
+</body>
+</html>
+
+
+
