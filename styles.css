@@ -62,3 +62,11 @@ main button[data-note]::after{content:attr(data-note);display:block;color:#59636
 .practice-control>.practice-inline-note{flex:0 0 100%}
 .sidebar>.practice-inline-note,.side-primary>.practice-inline-note{padding:0 10px 6px}
 .button-unit:has(>.practice-inline-note:not([hidden]))>.button-annotation{display:none}
+
+/* Keep legacy help text available to the inline help controls. */
+.button-annotation,.button-note,.annotated-control>small{display:none}
+.topbar,.sim-top{height:auto;min-height:60px}
+.sim-top{min-height:48px;flex-wrap:wrap}
+.topbar .button-unit .practice-help{display:inline-block}
+.topbar .button-unit,.sim-top .button-unit{margin-block:4px}
+.topbar .practice-inline-note,.sim-top .practice-inline-note{max-width:150px}
